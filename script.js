@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  // Just a test
   $(".input").on("change blur", function () {
     // Automatically replace an empty field with its correspondent letter (a, b or c)
     if ($(this).text().length === 0) {
