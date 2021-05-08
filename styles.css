@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 2% 8%;
+}
+
+h1 {
+  font-size: 2.4rem;
+  max-width: 30%;
+}
+
+.form {
+  padding-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.form > span {
+  border-width: 0px;
+  border: none;
+  color: #BEBEBE;
+  min-width: 1rem;
+}
+
+.form, .form > span {
+  font-size: 4rem;
+}
+
+.form > span:focus {
+  outline: none;
+}
+
+.form * {
+  margin-right: .4rem;
+}
