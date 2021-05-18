@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Added links -->
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+
+    <title>Linear Diophantine Equation Calculator</title>
+  </head>
+  <body>
+    <div class="body-wrapper">
+      <div class="header-wrapper">
+        <header>
+          <img src="./assets/white-hex.svg" class="rotate-hex" id="white-hex" alt="white-hex">
+          <p class="header-text">How it <br>works?</p>
+        </header>
+      </div>
+  
+      <div class="container">
+        <section id="hero">
+          <img src="./assets/icon.svg" id="icon" alt="icon">
+          <div class="title-wrapper">
+            <h1>Linear<br> <span>Diophantine</span><br> Equation<br> Calculator</h1>
+            <img class="blue-line" src="./assets/blue-line.svg" alt="blue-line">
+          </div>
+        </section>
+  
+        <section id="equation">
+          <h2 class="equation__title">Enter your equation</h2>
+          <div class="boxes-wrapper">
+            <div class="box-wrapper">
+              <div class="box">
+                <p>A</p>
+                <p class="blue-text input-field" role="textbox" contenteditable>---</p>
+                <div class="x-y">
+                  <p>X</p>
+                  <p>+</p>
+                </div>
+              </div>
+            </div>
+            <div class="box-wrapper">
+              <div class="box">
+                <p>B</p>
+                <p class="blue-text input-field" role="textbox" contenteditable>---</p>
+                <div class="x-y">
+                  <p>Y</p>
+                  <p>=</p>
+                </div>
+              </div>
+            </div>
+            <div class="box-wrapper">
+              <div class="box">
+                <p>C</p>
+                <p class="blue-text input-field" role="textbox" contenteditable>---</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="solution-wrapper">
+        <section class="solution">
+          <!-- <img class="rotate-hex big-hex" src="./assets/white-hex-outline.svg" alt="white-hex-outline"> -->
+          <div class="solutions">
+            <div class="sol-container">
+              <h2 class="particular-sol__title">
+                Particular Solution
+              </h2>
+              <img class="arrow" src="./assets/arrow.svg" alt="arrow">
+              <div class="particular-sol__equations">
+                <p class="output"></p>
+              </div>
+            </div>
+            <div class="sol-container">
+              <h2 class="particular-sol__title">
+                General Solution
+              </h2>
+              <img class="arrow" src="./assets/arrow.svg" alt="arrow">
+              <div class="particular-sol__equations">
+                <p class="output"></p>
+              </div>
+            </div>
+          </div>
+        </section>
+  
+        <div class="more-steps">
+          <img class="rotate-hex small-hex" src="./assets/white-hex-outline.svg" alt="white-hex-outline">
+          <div class="more-steps__content">
+            <p>More <br>steps</p>
+            <img src="./assets/plus.svg" alt="plus-symbol">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/anime.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

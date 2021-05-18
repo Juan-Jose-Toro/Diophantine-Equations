@@ -1,0 +1,393 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  overflow-y: hidden;
+  background-color: black;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+h1, h2, h3, p, span {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header-wrapper {
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 2em;
+}
+
+header p {
+  font-size: 1.25rem;
+}
+
+header #white-hex {
+  width: 6rem;
+  position: absolute;
+  top: 0.5rem;
+  right: -1.2rem;
+  mix-blend-mode: difference;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container #hero {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 4rem 0 2rem 0;
+}
+
+.container #hero #icon {
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  width: 5rem;
+}
+
+.container #hero h1 {
+  font-size: 2.1875rem;
+  font-weight: 600;
+}
+
+.container #hero h1 span {
+  color: #C96D6D;
+}
+
+.container #equation {
+  max-width: 40rem;
+  padding: 5rem 0;
+  width: 100%;
+}
+
+.container #equation .equation__title {
+  text-align: center;
+  font-size: 1.562rem;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.container #equation .boxes-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container #equation .boxes-wrapper .box-wrapper {
+  width: 70%;
+  max-width: 10rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container #equation .boxes-wrapper .box-wrapper .box {
+  overflow: hidden;
+  padding: 1em;
+  background-color: #181818;
+  width: 9rem;
+  height: 9rem;
+  margin-left: 1em;
+  -webkit-box-shadow: -12px 12px 24px #000000;
+          box-shadow: -12px 12px 24px #000000;
+  border-radius: 20px;
+  margin-top: 2rem;
+}
+
+.container #equation .boxes-wrapper .box-wrapper .box p {
+  font-size: 1.5rem;
+}
+
+.container #equation .boxes-wrapper .box-wrapper .box .blue-text {
+  font-size: 1.5rem;
+  color: #6FB4CA;
+  overflow-wrap: break-word;
+  outline: 0px solid transparent;
+}
+
+.container #equation .boxes-wrapper .box-wrapper .box .x-y {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  bottom: -1.3rem;
+  right: -1.3rem;
+  z-index: 2;
+}
+
+.container #equation .boxes-wrapper .box-wrapper .box .x-y p {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.container #equation .boxes-wrapper .box-wrapper .box .x-y p:nth-child(2) {
+  padding-left: .2rem;
+}
+
+.more-steps {
+  margin: 5rem 0 10rem 0;
+  position: relative;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.more-steps > img {
+  position: absolute;
+  -webkit-animation: spin 4s infinite;
+          animation: spin 4s infinite;
+}
+
+.more-steps .more-steps__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.more-steps .more-steps__content p {
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.more-steps .more-steps__content .small-hex {
+  display: initial;
+  width: 1.5rem;
+  margin-top: .5rem;
+}
+
+.solution {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.solution .big-hex {
+  display: none;
+}
+
+.solution .solutions {
+  display: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.solution .solutions > div:nth-child(1) {
+  margin-bottom: 3rem;
+}
+
+.solution .solutions .sol-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.solution .solutions h2, .solution .solutions p {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.solution .solutions .arrow {
+  width: .8rem;
+  margin: .8em 0;
+}
+
+.solution .solutions p {
+  font-size: 1.5rem;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body {
+    overflow-x: visible !important;
+  }
+  h1 {
+    font-size: 4rem !important;
+  }
+  h2 {
+    font-size: 2rem !important;
+  }
+  header .header-text {
+    font-size: 3rem;
+  }
+  header #white-hex {
+    width: 25rem;
+    top: -16rem;
+    right: -6rem;
+  }
+  header .header-text br {
+    display: none;
+  }
+  .container {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    padding: 0;
+  }
+  .container #hero #icon {
+    position: static;
+    width: 5rem;
+  }
+  .container #hero .blue-line {
+    width: 20rem;
+  }
+  .container #equation {
+    width: 40%;
+  }
+  .container #equation .boxes-wrapper {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    max-width: 40em;
+  }
+  .container #equation .x-y {
+    bottom: -3.5rem !important;
+    right: -4rem !important;
+  }
+  .container #equation .x-y p {
+    font-size: 6rem !important;
+  }
+  .more-steps {
+    padding-left: 40%;
+  }
+  .solution {
+    position: relative;
+  }
+  .solution .big-hex {
+    display: initial;
+    position: absolute;
+    width: 40rem;
+    left: -15rem;
+    top: -5rem;
+  }
+  .solution .solutions {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding-right: 10%;
+  }
+  .solution .solutions .sol-container {
+    margin: 0 0 0 4em !important;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .body-wrapper {
+    width: 100%;
+    max-width: 100rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

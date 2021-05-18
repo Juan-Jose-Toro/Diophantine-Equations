@@ -1,0 +1,338 @@
+@import 'variables';
+@import 'resets';
+@import 'functions';
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  overflow-y: hidden;
+  background-color: $secondary-color;
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+h1, h2, h3, p, span {
+  color: $primary-color;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header-wrapper {
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  padding: 2em;
+
+  p {
+    font-size: 1.25rem;
+  }
+
+  #white-hex {
+    width: 6rem;
+    position: absolute;
+    top: 0.5rem;
+    right: -1.2rem;
+    mix-blend-mode: difference;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  #hero {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    padding: 4rem 0 2rem 0;
+
+    #icon {
+      position: absolute;
+      top: -1rem;
+      left: -1rem;
+      width: 5rem;
+    }
+
+    h1 {
+      font-size: 2.1875rem;
+      font-weight: 600;
+
+      span {
+        color: $soft-red;
+      }
+    }
+  }
+
+  #equation {
+    max-width: 40rem;
+    padding: 5rem 0;
+    width: 100%;
+
+    .equation__title {
+      text-align: center;
+      font-size: 1.562rem;
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .boxes-wrapper {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .box-wrapper {
+        width: 70%;
+        max-width: 10rem;
+        position: relative;
+        display: flex;
+        
+        justify-content: center;
+  
+        .box {
+          overflow: hidden;
+          padding: 1em;
+          background-color: $box-color;
+          width: 9rem;
+          height: 9rem;
+          margin-left: 1em;
+          box-shadow: -12px 12px 24px #000000;
+          border-radius: 20px;
+          margin-top: 2rem;
+  
+          p {
+            font-size: 1.5rem;
+          }
+          
+          .blue-text {
+            font-size: 1.5rem;
+            color: $light-blue;
+            overflow-wrap: break-word;
+            outline: 0px solid transparent;
+          }
+  
+          .x-y {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            bottom: -1.3rem;
+            right: -1.3rem;
+            z-index: 2;
+  
+            p {
+              font-size: 2.5rem;
+              font-weight: 700;
+            }
+  
+            p:nth-child(2) {
+              padding-left: .2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+.more-steps {
+  margin: 5rem 0 10rem 0;
+  position: relative;
+  display: none; // Change to flex
+  justify-content: center;
+  align-items: center;
+  
+  & > img {
+    position: absolute;
+    animation: spin random(10)+s infinite;
+  }
+
+  #{&}__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-size: 1rem;
+      font-weight: 500;
+      font-style: italic;
+    }
+
+    .small-hex {
+      display: initial;
+      width: 1.5rem;
+      margin-top: .5rem;
+    }
+  }
+}
+
+.solution {
+  justify-content: center;
+
+  .big-hex {
+    display: none;
+  }
+
+  .solutions {
+    display: none;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & > div:nth-child(1) {
+      margin-bottom: 3rem;
+    }
+
+    .sol-container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h2, p {
+      font-style: italic;
+      font-weight: 500;
+    }
+    
+    .arrow {
+      width: .8rem;
+      margin: .8em 0;
+    }
+    
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body {
+    overflow-x: visible !important;
+  }
+
+  h1 {
+    font-size: 4rem !important;
+  }
+
+  h2 {
+    font-size: 2rem !important;
+  }
+
+  header {
+    .header-text {
+      font-size: 3rem;
+    }
+
+    #white-hex {
+      width: 25rem;
+      top: -16rem;
+      right: -6rem;
+    }
+  
+    .header-text {
+      br {
+        display: none;
+      }
+    }
+  }
+
+  .container {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0;
+
+    #hero {
+      #icon {
+        position: static;
+        width: 5rem;
+      }
+
+      .blue-line {
+        width: 20rem;
+      }
+    }
+
+    #equation {
+      width: 40%;
+
+      .boxes-wrapper {
+        justify-content: space-around;
+        max-width: 40em;
+      }
+
+      .x-y {
+        bottom: -3.5rem !important;
+        right: -4rem !important;
+
+        p {
+          font-size: 6rem !important;
+        }
+      }
+    }
+  }
+
+  .more-steps {
+    padding-left: 40%;
+  }
+
+  .solution {
+    position: relative;
+
+    .big-hex {
+      display: initial;
+      position: absolute;
+      width: 40rem;
+      left: -15rem;
+      top: -5rem;
+    }
+
+    .solutions {
+      width: 100%;
+      flex-direction: row;
+      justify-content: flex-end;
+      padding-right: 10%;
+
+      .sol-container {
+        margin: 0 0 0 4em !important;
+      }
+    }
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  body {
+    display: flex;
+    justify-content: center;
+
+    .body-wrapper {
+      width: 100%;
+      max-width: 100rem;
+    }
+  }
+}
+
