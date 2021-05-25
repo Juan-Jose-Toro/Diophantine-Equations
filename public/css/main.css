@@ -6,6 +6,7 @@
 }
 
 html {
+  height: 100vh;
   overflow-x: hidden;
 }
 
@@ -196,8 +197,8 @@ header #white-hex {
 
 .more-steps > img {
   position: absolute;
-  -webkit-animation: spin 4s infinite;
-          animation: spin 4s infinite;
+  -webkit-animation: spin 3s infinite;
+          animation: spin 3s infinite;
 }
 
 .more-steps .more-steps__content {
@@ -235,7 +236,8 @@ header #white-hex {
 }
 
 .solution .big-hex {
-  display: none;
+  display: default;
+  z-index: 100;
 }
 
 .solution .solutions {
@@ -288,6 +290,19 @@ header #white-hex {
 
 .solution .solutions p {
   font-size: 1.5rem;
+}
+
+.no-solution {
+  width: 100%;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.no-solution h2 {
+  font-weight: 500;
+  font-style: italic;
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -346,8 +361,18 @@ header #white-hex {
   .container #equation .x-y p {
     font-size: 6rem !important;
   }
+  .no-solution {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding-right: 20%;
+  }
   .more-steps {
     padding-left: 40%;
+    margin: 5rem 0 5rem 0;
+  }
+  .more-steps #plus-symbol {
+    margin-top: .5rem;
   }
   .solution {
     position: relative;

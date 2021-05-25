@@ -56,18 +56,33 @@ $(document).ready(() => {
         const response = fetch("/api", options)
           .then((res) => res.json())
           .then((data) => {
-            $(".output").html(
-              `x = ${data.x_part}` + "<br>" + `y = ${data.y_part}`
-            );
-            $(".solutions").css("display", "flex");
-            $(".more-steps").appendTo(".solution");
-            $(".more-steps").css("display", "flex");
+            if (data.sol) {
+              $(".no-solution").css("display", "none");
+              $("#p_solution").html(
+                `x = ${data.x_part}` + "<br>" + `y = ${data.y_part}`
+              );
+              $("#g_solution").html(
+                `x = ${data.x_part} + ${variablesPackage.b / data.gcd} · n` + "<br>" 
+                + `y = ${data.y_part} - ${variablesPackage.a / data.gcd} · n`
+              );
+              $(".solutions").css("display", "flex");
+              $(".more-steps").appendTo(".solution");
+              $(".more-steps").css("display", "flex");
+  
+              const solutiontl = gsap.timeline({ defaults: { duration: 0.5 } });
+              solutiontl
+                .from(".solution", { y: "10", opacity: 0 })
+                .from(".more-steps", { y: "10", opacity: 0 })
+              // console.log(data);
+            } else {
+              $(".solutions").css("display", "none");
+              $(".more-steps").css("display", "none");
+              $(".no-solution").css("display", "flex");
 
-            const solutiontl = gsap.timeline({ defaults: { duration: 0.5 } });
-            solutiontl
-              .from(".solution", { y: "10", opacity: 0 })
-              .from(".more-steps", { y: "10", opacity: 0 })
-            // console.log(data);
+              const solutiontl = gsap.timeline({ defaults: { duration: 0.5 } });
+              solutiontl
+                .from(".no-solution", { y: "10", opacity: 0 })
+            }
           });
       }
     });

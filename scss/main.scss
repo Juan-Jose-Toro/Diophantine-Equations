@@ -3,6 +3,7 @@
 @import 'functions';
 
 html {
+  height: 100vh;
   overflow-x: hidden;
 }
 
@@ -185,7 +186,8 @@ header {
   justify-content: center;
 
   .big-hex {
-    display: none;
+    display: default;
+    z-index: 100;
   }
 
   .solutions {
@@ -220,6 +222,17 @@ header {
     p {
       font-size: 1.5rem;
     }
+  }
+}
+
+.no-solution {
+  width: 100%;
+  display: none;
+  justify-content: center;
+
+  h2 {
+    font-weight: 500;
+    font-style: italic;
   }
 }
 
@@ -295,8 +308,18 @@ header {
     }
   }
 
+  .no-solution {
+    justify-content: flex-end;
+    padding-right: 20%;
+  }
+
   .more-steps {
     padding-left: 40%;
+    margin: 5rem 0 5rem 0;
+
+    #plus-symbol {
+      margin-top: .5rem;
+    }
   }
 
   .solution {
